@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libretto - Replica UI</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <span class="back-arrow">←</span>
+                <img class="cl-icon" src="libretto.svg" alt="Profilo" style="width:49px; height:49px;">
+                <span class="header-title">Libretto</span>
+            </div>
+            <div class="profile-icon">👤</div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="tabs">
+            <div class="tab active">SUPERATI</div>
+            <div class="tab inactive">PIANIFICATI</div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Exam Card 1 -->
+            <div class="exam-card">
+                <div class="exam-header">
+                    <div class="exam-title">SUPERAMENTO VERIFICA CONOSCENZE IN INGRESSO</div>
+                    <div class="exam-status status-passed">
+                        <span class="check-icon">✓</span>
+                    </div>
+                </div>
+                <div class="exam-details">
+                    <div class="exam-code">Codice AD: OFAB005SUP</div>
+                    <div class="exam-date">Superato il: 20 settembre 2019</div>
+                </div>
+                <div class="exam-cfu">
+                    <span class="cfu-text">0 CFU</span>
+                    <span class="dropdown-arrow">⌄</span>
+                </div>
+            </div>
+
+            <!-- Exam Card 2 -->
+            <div class="exam-card">
+                <div class="exam-header">
+                    <div class="exam-title">ZOOLOGIA CON LABORATORIO</div>
+                    <div class="exam-status status-grade">27</div>
+                </div>
+                <div class="exam-details">
+                    <div class="exam-code">Codice AD: B016083</div>
+                    <div class="exam-date">Superato il: 27 gennaio 2020</div>
+                </div>
+                <div class="exam-cfu">
+                    <span class="cfu-text">9 CFU</span>
+                    <span class="dropdown-arrow">⌄</span>
+                </div>
+            </div>
+
+            <!-- Puoi aggiungere qui altri esami personalizzati -->
+            <div class="exam-card">
+                <div class="exam-header">
+                    <div class="exam-title">MATEMATICA GENERALE</div>
+                    <div class="exam-status status-grade">30</div>
+                </div>
+                <div class="exam-details">
+                    <div class="exam-code">Codice AD: CUSTOM001</div>
+                    <div class="exam-date">Superato il: 15 marzo 2020</div>
+                </div>
+                <div class="exam-cfu">
+                    <span class="cfu-text">12 CFU</span>
+                    <span class="dropdown-arrow">⌄</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Navigation -->
+        <div class="bottom-nav">
+            <a href="#" class="nav-item">
+                <div class="nav-icon">🏠</div>
+                <span>Home</span>
+            </a>
+            <a href="#" class="nav-item">
+                <div class="nav-icon">📄</div>
+                <span>Piano Studio</span>
+            </a>
+            <a href="#" class="nav-item active">
+                <div class="nav-icon">📚</div>
+                <span>Libretto</span>
+            </a>
+            <a href="#" class="nav-item">
+                <div class="nav-icon">📅</div>
+                <span>Calendario esami</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Semplice interattività per i tab
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                document.querySelectorAll('.tab').forEach(t => {
+                    t.classList.remove('active');
+                    t.classList.add('inactive');
+                });
+                this.classList.remove('inactive');
+                this.classList.add('active');
+            });
+        });
+
+        // Aggiungi funzionalità dropdown
+        document.querySelectorAll('.dropdown-arrow').forEach(arrow => {
+            arrow.addEventListener('click', function() {
+                alert('Funzionalità dropdown - qui puoi aggiungere dettagli aggiuntivi');
+            });
+        });
+    </script>
+</body>
+</html>
