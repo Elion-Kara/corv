@@ -115,7 +115,7 @@ body {
 
 /* Content */
 .content {
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
